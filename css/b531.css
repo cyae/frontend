@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "My Font Type", sans-serif;
+  src: url("some .woff .ttf site");
+}
+body {
+  margin: 0 20%;
+  border: 2px dotted black;
+  padding: 10px 10px 10px 10px;
+  font-family: sans-serif;
+  background-image: url(/img/bg.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+  font-size: 20px;
+  line-height: 1.6;
+}
+header > h1 {
+  background-color: azure;
+  color: teal;
+  font-family: "Sarasa UI";
+  font-style: italic;
+  border-bottom: 3px solid black;
+  font-size: 150%;
+  clear: right;
+}
+section {
+  line-height: 1.5;
+}
+section h2 {
+  background-color: azure;
+  color: teal;
+  font-family: "Sarasa UI";
+  font-style: italic;
+  border-bottom: thin dotted black;
+  font-size: 120%;
+  clear: right;
+}
+#motto {
+  color: black;
+
+  /* 内边距 */
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  /* 边框 */
+  /* border-color: black; */
+  /* border-width: 1px; */
+  /* border-style: dashed; */
+  /* border-radius: 15px; */
+
+  /* 外边距 */
+  margin-right: 200px;
+
+  float: right;
+}
+
+footer {
+  font-size: small;
+  border-top-width: 1px;
+  border-top-color: black;
+  border-top-style: double;
+  clear: right;
+}
+
+#timer {
+  margin-left: 550px;
+}
+
+#jerry {
+  width: 100px;
+  /* border-width: 1px; */
+  /* border-style: dashed; */
+  margin-bottom: 100px;
+  margin-left: 50px;
+}
+
+.list {
+  margin-left: 10px;
+}
+
+.list-cap {
+  font-weight: bold;
+  font-size: 100%;
+  color: darkgreen;
+}
+
+ol span {
+  line-height: 3;
+}
+
+ol ul li  {
+  list-style-type: square;
+  line-height: 2;
+}
+
+.list-item {
+  font-weight: normal;
+  font-size: 80%;
+  color: navy;
+}
+
+.jump {
+  float: right;
+}
+
+a:link {
+  color: darkblue;
+}
+
+a:visited {
+  color: darkviolet;
+}
+
+a:hover {
+  color: darkolivegreen;
+}
+
+a {
+  font-size: 60%;
+}
+
+table {
+  border: thin solid black;
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: thin dotted gray;
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: beige;
+}
+
+tr:nth-child(2n) {
+  background-color: paleturquoise;
+}
+
+caption {
+  font-style: italic;
+  padding-top: 10px;
+}
+
+.list-item-gpu {
+  text-align: left;
+}
+
+.list-item-ram {
+  text-align: right;
+}

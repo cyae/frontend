@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/b531.css" media="screen and (max-width: 2160px)" />
+  <title>login</title>
+</head>
+
+<body>
+  <div>
+    <div id="login">
+      <form action="https://login.html" method="post">
+        用户名：<input type="text" name="username" id="username" maxlength="12" placeholder="12" required><br>
+        密码：<input type="password" name="password" id="password" maxlength="12" minlength="6" placeholder="6~12" required><br>
+        <input type="button" value="登录"><br>
+        <fieldset>
+          <legend>登陆模式</legend>
+          <input type="radio" name="visibility" value="visible" id="visible">
+          <label for="visible">可见</label>
+          <input type="radio" name="visibility" value="anonymous" id="anonymous">
+          <label for="anonymous">隐身</label><br>
+        </fieldset>
+      </form>
+    </div>
+    <div id="comment">
+      <textarea name="comments" cols="48" rows="10">留言版</textarea>
+    </div>
+    <div id="character">
+      <p>页面模式：</p>
+      <select name="character" id="character">
+        <option value="light-mode">白天模式</option>
+        <option value="dark-mode">夜间模式</option>
+      </select>
+    </div>
+    <div id="number">
+      数字：<input type="number" name="number" id="number" min="0" max="10">
+    </div>
+    <div>
+      范围：<input type="range" name="range" id="range" min="0" max="10" step="2">
+    </div>
+    <div>
+      取色器：<input type="color" name="color" id="color">
+    </div>
+    <div>
+      <input type="date" name="" id="">
+    </div>
+    <div>
+      Email:<input type="email" name="" id="">
+    </div>
+    <div>
+      URL：<input type="url" name="" id="">
+    </div>
+    <div>
+      Tel: <input type="tel" name="" id="">
+    </div>
+    <div>
+      上传文件：<input type="file" name="" id="">
+    </div>
+  </div>
+</body>
+
+</html>
