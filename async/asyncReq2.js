@@ -23,9 +23,9 @@ const asyncRequest2 = sourcePath => {
     })
 };
 
-var localPath1 = 'data/tweets.json';
-var localPath2 = 'data/fb-friend.json';
-var localPath3 = 'data/yt-vids.json';
+var localPath1 = '/data/tweets.json';
+var localPath2 = '/data/fb-friend.json';
+var localPath3 = '/data/yt-vids.json';
 
 // syncRequest(localPath1).then(data1 => {
 //     console.log(data1);
