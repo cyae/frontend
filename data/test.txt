@@ -1,0 +1,15 @@
+[
+    {
+        "user": "jack",
+        "tweet": "where is mario?"
+    }, {
+        "user": "yoshi",
+        "tweet": "hmm, nice apple"
+    }, {
+        "user": "yoshi",
+        "tweet": "i eat an apple"
+    }, {
+        "user": "yoshi",
+        "tweet": "sod off bowser"
+    }
+]
