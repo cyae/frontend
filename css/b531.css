@@ -7,7 +7,7 @@ body {
   border: 2px dotted black;
   padding: 10px 10px 10px 10px;
   font-family: sans-serif;
-  background-image: url(/img/bg.jpg);
+  background-image: url(bg.jpg);
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top left;
@@ -88,7 +88,7 @@ ol span {
   line-height: 3;
 }
 
-ol ul li  {
+ol ul li {
   list-style-type: square;
   line-height: 2;
 }
@@ -125,7 +125,8 @@ table {
   border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
   border: thin dotted gray;
   padding: 5px;
   text-align: center;

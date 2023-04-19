@@ -1,0 +1,106 @@
+<!-- 约定使用html5规范 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- this dynamic data from various sources will be rendered using EJS view engine -->
+    <title>homepage | <%= title %>
+    </title>
+    <link rel="stylesheet" href="b531.css" media="screen and (max-width: 2160px)" />
+</head>
+
+<body>
+    <!-- using EJS to include common components -->
+    <%- include('./components/header.ejs') %>
+        <section>
+            <div id="introduction">
+                <h2><img src="git-icon.png" alt="标题" width="20px" />简介</h2>
+                <dl class="list">
+                    <span class="list-cap">
+                        <dt>计算机视觉</dt>
+                    </span>
+                    <span class="list-item">
+                        <dd>使用深度学习方法赋予计算机空间推理、图像分析的能力</dd>
+                    </span>
+                    <span class="list-cap">
+                        <dt>推荐系统</dt>
+                    </span>
+                    <span class="list-item">
+                        <dd>使用协同过滤模型、图卷积神经网络等方法进行社交关系推理</dd>
+                    </span>
+                    <span class="list-cap">
+                        <dt>群智能</dt>
+                    </span>
+                    <span class="list-item">
+                        <dd>将其他学科的经典模型用于凸优化过程</dd>
+                    </span>
+                </dl>
+                <p>本实验室主要研究方向为：<br /></p>
+                <ol id="fields" class="list">
+                    <span class="list-cap">
+                        <li>计算机视觉</li>
+                    </span>
+                    <span class="list-item">
+                        <ul>
+                            <li>图像分类</li>
+                            <li>图像分割</li>
+                            <li>目标检测</li>
+                        </ul>
+                    </span>
+                    <span class="list-cap">
+                        <li>推荐系统</li>
+                    </span>
+                    <span class="list-item">
+                        <ul>
+                            <li>图卷积神经网络</li>
+                            <li>协同过滤</li>
+                        </ul>
+                    </span>
+                    <span class="list-cap">
+                        <li>群智能</li>
+                    </span>
+                    <span class="list-item">
+                        <ul>
+                            <li>粒子束</li>
+                            <li>蚁群</li>
+                            <li>遗传</li>
+                            <li>模拟退火</li>
+                        </ul>
+                    </span>
+                </ol>
+                <a href="/desc" title="点我" class="jump">[详细介绍]</a>
+            </div>
+            <div id="member">
+                <h2><img src="git-icon.png" alt="标题" width="20px" />团队成员</h2>
+                <p>
+                    <span class="list-cap">教授：</span>
+                    <span class="list-item">王生生</span><br />
+                    <span class="list-cap">博士生：</span>
+                    <span class="list-item">赵欣、龙思凡、付子豪、王碧琳</span><br />
+                    <span class="list-cap">硕士生：</span>
+                    <span class="list-item">王祺、李昂、殷伯涵</span><br />
+                    <!-- render newbies using ejs -->
+                    <% if (newbies.length> 0) { %>
+                        <span class="list-cap">新生：</span>
+                        <span class="list-item">
+                            <%= newbies %>
+                        </span><br />
+                        <% } %>
+                            <a href="#header" class="jump">[回到顶部]</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- using EJS to include common components -->
+        <%- include('./components/footer.ejs') %>
+
+            <!-- <script src="/async/asyncReq1.js"></script>
+  <script src="/async/asyncReq2.js"></script>
+  <script src="/async/asyncReq3.js"></script>
+  <script src="./es6/let.js"></script> -->
+</body>
+
+</html>

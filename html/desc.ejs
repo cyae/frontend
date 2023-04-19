@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>详细介绍</title>
+    <link rel="stylesheet" href="b531.css" media="screen and (max-width: 2160px)" />
+</head>
+
+<body>
+    <!-- using EJS to include common components -->
+    <%- include('./components/header.ejs') %>
+        <section>
+            <h2><img src="git-icon.png" alt="标题" width="20px" />实验室介绍</h1>
+                本实验室隶属于教育部重点符号与知识工程实验室。<br />
+                <dl>
+                    <dt>
+                        <span class="list-cap">主要研究方向：</span>
+                    </dt>
+                    <dd>
+                        <span class="list-item">
+                            计算机视觉、推荐系统、群智能。<br />
+                        </span>
+                    </dd>
+                    <dt>
+                        <span class="list-cap">现拥有算力：</span>
+                    </dt>
+                    <dd>
+                        <table>
+                            <caption>算力表</caption>
+                            <tr class="list-cap">
+                                <th class="list-cap-gpu">显卡</th>
+                                <th class="list-cap-ram">显存</th>
+                                <th class="list-cap-num">数量</th>
+                            </tr>
+                            <tr class="list-item">
+                                <td class="list-item-gpu">nvidia 3060</td>
+                                <td class="list-item-ram" rowspan="5">1024 mb</td>
+                                <td class="list-item-num" rowspan="2">2</td>
+                            </tr>
+                            <tr class="list-item">
+                                <td class="list-item-gpu">nvidia 2080ti</td>
+                                <!-- <td class="list-item-ram">1024 mb</td> -->
+                                <!-- <td class="list-item-num">2</td> -->
+                            </tr>
+                            <tr class="list-item">
+                                <td class="list-item-gpu">nvidia 2070</td>
+                                <!-- <td class="list-item-ram">1024 mb</td> -->
+                                <td class="list-item-num" rowspan="2">1</td>
+                            </tr>
+                            <tr class="list-item">
+                                <td class="list-item-gpu">nvidia 1080 TITAN</td>
+                                <!-- <td class="list-item-ram">1024 mb</td> -->
+                                <!-- <td class="list-item-num">1</td> -->
+                            </tr>
+                            <tr class="list-item">
+                                <td class="list-item-gpu">nvidia 1080ti</td>
+                                <!-- <td class="list-item-ram">1024 mb</td> -->
+                                <td class="list-item-num">2</td>
+                            </tr>
+                        </table>
+                    </dd>
+                </dl>
+                <a href="../index#welcome" class="jump">[回到主页]</a>
+        </section>
+        <!-- using EJS to include common components -->
+        <%- include('./components/footer.ejs') %>
+</body>
+
+</html>
