@@ -1,8 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const userRouter = require('../router/userRouter');
-const User = require('./models/user');
+const userRouter = require('./router/userRouter');
 
 const app = express();
 
@@ -18,12 +17,11 @@ mongoose
 // the EJS view engine will render .ejs to valid .html files, and then send them back to caller
 // This is the so-called SERVER-SIDE RENDER.
 app.set('view engine', 'ejs');
-app.set('views', 'html');
+app.set('views', './node/view');
 
 // create middleware to include static files
-const root = __dirname.slice(0, __dirname.lastIndexOf('\\'));
-app.use(express.static(root + '/css'));
-app.use(express.static(root + '/img'));
+app.use(express.static(__dirname + '/public/css'));
+app.use(express.static(__dirname + '/public/img'));
 
 // DIY middleware to trace for safety
 app.use((req, res, next) => {
@@ -47,32 +45,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/user', userRouter);
 
 // ROUTER
-app.get('/', (req, res) => {
-  const dataFromDB = 'some data'; // fectch data from other sources, like DB, MQ, Net, Disk etc.
-  User.find()
-    .sort({ createdAt: -1 }) // sort as recently created
-    .then(data => {
-      var newbies = '';
-      if (data.length > 0) {
-        data.forEach(user => {
-          newbies += user.name + '、';
-        });
-      }
-      res.render('index', {
-        title: dataFromDB,
-        newbies: newbies.slice(0, newbies.length - 1),
-      }); // pass the fetched data through an object
-    })
-    .catch(err => console.log(err));
-});
-
 app.get('/desc', (req, res) => {
   res.render('desc');
 });
 
 // redirect
-app.get('/index', (req, res) => {
-  res.redirect('/');
+app.get('/', (req, res) => {
+  res.redirect('/user');
 });
 
 // default: 404
