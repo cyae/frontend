@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "My Font Type", sans-serif;
-  src: url("some .woff .ttf site");
+  font-family: 'My Font Type', sans-serif;
+  src: url('some .woff .ttf site');
 }
 body {
   margin: 0 20%;
@@ -17,7 +17,7 @@ body {
 header > h1 {
   background-color: azure;
   color: teal;
-  font-family: "Sarasa UI";
+  font-family: 'Sarasa UI';
   font-style: italic;
   border-bottom: 3px solid black;
   font-size: 150%;
@@ -29,7 +29,7 @@ section {
 section h2 {
   background-color: azure;
   color: teal;
-  font-family: "Sarasa UI";
+  font-family: 'Sarasa UI';
   font-style: italic;
   border-bottom: thin dotted black;
   font-size: 120%;
@@ -151,4 +151,14 @@ caption {
 
 .list-item-ram {
   text-align: right;
+}
+
+.delete {
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.delete:hover {
+  cursor: pointer;
+  box-shadow: 1px 2px 3px black;
 }
