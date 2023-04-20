@@ -91,7 +91,7 @@
             <% } %>
               <a href="#header" class="jump">[回到顶部]</a>
         </p>
-        <form action="/create-user" method="post">
+        <form action="/user/create" method="post">
           <label for="name">姓名:</label>
           <input type="text" name="name" id="name" minlength="2" maxlength="12" placeholder="请输入姓名" required>
           <button type="submit">添加</button> <br>
@@ -112,8 +112,7 @@
       <script>
         const trashcan = document.querySelector('a.delete');
         trashcan.addEventListener('click', event => {
-          const endpoint = '/';
-          fetch(endpoint, {
+          fetch('/user/clear', {
             method: 'DELETE',
           })
             .then(res => res.json())

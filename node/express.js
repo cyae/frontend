@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const userRouter = require('../router/userRouter');
 const User = require('./models/user');
 
 const app = express();
@@ -42,6 +43,9 @@ app.use(morgan('dev'));
 // express middleware for request parsing
 app.use(express.urlencoded({ extended: true }));
 
+// user router middleware
+app.use('/user', userRouter);
+
 // ROUTER
 app.get('/', (req, res) => {
   const dataFromDB = 'some data'; // fectch data from other sources, like DB, MQ, Net, Disk etc.
@@ -69,41 +73,6 @@ app.get('/desc', (req, res) => {
 // redirect
 app.get('/index', (req, res) => {
   res.redirect('/');
-});
-
-// CRUD
-app.post('/create-user', (req, res) => {
-  const user = new User(req.body);
-  user
-    .save() // save to DB
-    .then(data => {
-      res.redirect('/');
-    })
-    .catch(err => console.log(err));
-});
-
-app.get('/retrieve-all-user', (req, res) => {
-  User.find()
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => console.log(err));
-});
-
-app.get('/retrieve-single-user', (req, res) => {
-  User.findById('64400297e2e720755b3902b1')
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => console.log(err));
-});
-
-app.delete('/', (req, res) => {
-  User.deleteMany()
-    .then(data => {
-      res.json({ redirect: '/' });
-    })
-    .catch(err => console.log(err));
 });
 
 // default: 404
